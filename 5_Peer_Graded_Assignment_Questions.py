@@ -71,7 +71,7 @@ def compute_data_choice_2(df):
 
 
 # Application layout
-app.layout = html.Div(children=[ html.H1('US Domestic Airline Fights Performance', style={'textAlign':'center', 'color':'#503D36', 'font-size':'24'})
+app.layout = html.Div(children=[ html.H1('US Domestic Airline Fights Performance', style={'textAlign':'center', 'color':'#503D36', 'font-size':'24'}),
                                 # TASK1: Add title to the dashboard
                                 # Enter your code below. Make sure you have correct formatting.
     
@@ -181,7 +181,7 @@ def get_graph(chart, year, children1, children2, c3, c4, c5):
             
             # TASK6: Number of flights flying to each state from each reporting airline
             # Enter your code below. Make sure you have correct formatting.
-            tree_fig= px.treemap(tree_data, path['DestState', 'Reporting_Airline'],
+            tree_fig= px.treemap(tree_data, path=['DestState', 'Reporting_Airline'],
                                     values='Flights',
                                     color='Flights',
                                     color_continuous_scale='RdBu',
